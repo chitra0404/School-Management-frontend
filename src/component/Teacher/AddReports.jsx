@@ -86,14 +86,10 @@ function AddReports() {
     <div>
     <div>
     <section className="vh-100 vw-100 mt-5" >
-      <div className="d-flex align-items-center h-100 gradient-custom-3">
-        <div className="container h-100">
-          <div className="row d-flex justify-content-center align-items-center h-100">
-            <div className="col-12 justify-content-center align-items-center   ">
-              <div className="card" style={{ borderRadius: "15px" }}>
-                <div className="card-body p-4">
+      
+      <div className="col-md-6  align-items-start   ">
                   <h2 className="text-uppercase text-center mb-4">
-                    Create Notices
+                    Report
                   </h2>
 
                   <form onSubmit={handleSubmit}>
@@ -222,11 +218,7 @@ function AddReports() {
                   
                   </form>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+          
     </section>   
     </div>
     

@@ -6,12 +6,13 @@ import { Link, useLocation, Route, Routes } from 'react-router-dom';
 import AddReports from './AddReports';
 import GetReport from './GetReport';
 import Notice from '../Notice';
+import Subject from '../Subject';
 
 function SideBarLayout() {
   return (
     <section className="vh-100 vw-100 d-flex justify-content-center align-items-center">
       <div className="row align-items-start w-100 h-100">
-        <div ><h1 className='text-start'>Teacher Dashboard</h1></div>
+        <div ><h1 className='text-center bg-danger'>Teacher Dashboard</h1></div>
         {/* AdminSideBar column */}
         <div className="col-md-3  align-items-start h-100">
           <SideBar />
@@ -23,6 +24,8 @@ function SideBarLayout() {
             <Route path="/getnotice" element={<Notice/>} />
             <Route path="/addreport" element={<AddReports />} />
             <Route path="/getreport" element={<GetReport />} />
+            <Route path="/getsub" element={<Subject />} />
+
 
           </Routes>
         </div>

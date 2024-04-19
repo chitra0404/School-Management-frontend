@@ -9,13 +9,15 @@ import axios from 'axios';
 
 
 
-function AddUpdate() {   
+function AddSubject() {   
   
     const [open,setOpen]=useState(true);
     const [newUpdate, setNewUpdate] =  useState({
-      title:"",
-     details:"",
-     date:"",
+      subcode:"",
+     subname:"",
+     sessions:"",
+     className:"",
+     teacherName:""
      
     });
     // const navigate = useNavigate;
@@ -26,20 +28,22 @@ function AddUpdate() {
         const update= {...newUpdate }
         
         try {
-        const token = localStorage.getItem('tokenAuth')
-        const email = localStorage.getItem('email')
+        const token = localStorage.getItem('loggedInUser')
+       
                 console.log(token, email)
             const config = { headers : {"x-auth-token" : token}} 
-        const response = await axios.post(`http://localhost:3000/app/addupdate`, 
+        const response = await axios.post(`http://localhost:3000/app/createsub`, 
         update, config) 
         //console.log(response);
         if(response.status === 200){
             //console.log(response)
            
             setNewUpdate({
-              title:"",
-              details:"",
-              date:"",
+                subcode:"",
+                subname:"",
+                sessions:"",
+                className:"",
+                teacherName:""
                 
                 
             })
@@ -79,18 +83,18 @@ function AddUpdate() {
              
                 
              <h2 className="text-uppercase text-center mb-4">
-                    Create Notices
+                   
                   </h2>
 
                   <form onSubmit={handleSubmit}>
                     <div className="form-outline mb-2">
                       <input
                         type="text"
-                        id="title"
+                        id="subcode"
                         className="form-control"
-                        placeholder="Enter title of your request"
-                        value={newUpdate.title}
-                        onChange={(e) => setNewUpdate({...newUpdate, title: e.target.value})}
+                        placeholder="Enter subcode"
+                        value={newUpdate.subcode}
+                        onChange={(e) => setNewUpdate({...newUpdate, subcode: e.target.value})}
 
                       
                       />
@@ -102,11 +106,38 @@ function AddUpdate() {
                     <div className="form-outline mb-2">
                       <input
                         type="textarea"
-                        id="details"
+                        id="subname"
                         className="form-control"
-                        placeholder="Enter details"
-                        value={newUpdate.details}
-                        onChange={(e) => setNewUpdate({...newUpdate, details: e.target.value})}
+                        placeholder="Enter subname"
+                        value={newUpdate.subname}
+                        onChange={(e) => setNewUpdate({...newUpdate, subname: e.target.value})}
+                       
+                      />
+                      </div>
+                      <div className="form-outline mb-2">
+                      <input
+                        type="textarea"
+                        id="sessions"
+                        className="form-control"
+                        placeholder="Enter session"
+                        value={newUpdate.sessions}
+                        onChange={(e) => setNewUpdate({...newUpdate, sessions: e.target.value})}
+                       
+                      />
+                      
+                    </div>
+                  
+                       
+                    
+
+                      <div className="form-outline mb-2">
+                      <input
+                        type="textarea"
+                        id="subname"
+                        className="form-control"
+                        placeholder="Enter subname"
+                        value={newUpdate.teacherName}
+                        onChange={(e) => setNewUpdate({...newUpdate, teacherName: e.target.value})}
                        
                       />
                       
@@ -116,16 +147,12 @@ function AddUpdate() {
                         type="text"
                         id="date"
                         className="form-control"
-                        placeholder="Enter the date of the request"
-                        value={newUpdate.date}
-                        onChange={(e) => setNewUpdate({...newUpdate, date: e.target.value})}
+                        placeholder="Enter  classname"
+                        value={newUpdate.className}
+                        onChange={(e) => setNewUpdate({...newUpdate, className: e.target.value})}
                        
                       />
                       </div>
-                       
-                    
-
-                 
 
                     <div className="d-flex justify-content-center">
                       <button
@@ -149,4 +176,4 @@ function AddUpdate() {
   )
 }
 
-export default AddUpdate;
+export default AddSubject;

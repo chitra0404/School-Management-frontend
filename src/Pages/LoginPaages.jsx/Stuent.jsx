@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
  import { Link, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import axios from "axios";
@@ -10,7 +10,8 @@ function Stuent() {
   const [success, setSuccess] = useState(false);
   const [invalid, setInvaild] = useState(false);
 //   const Navigate = useNavigate();
-const Navigate = useNavigate();
+const navigate = useNavigate();
+
 
   const HandleLogin = async (studentID,email, password) => {
     try {
@@ -21,7 +22,7 @@ const Navigate = useNavigate();
       setSuccess(true);
       setUserType('student');
       setTimeout(() => {
-        Navigate("/student");
+        navigate("/student");
       }, 500);
     } catch (err) {
       console.log(err);
@@ -58,6 +59,7 @@ const Navigate = useNavigate();
       Formik.values.password = "";
     },
   });
+ 
 
   return (
     <section className="vh-100 vw-100 justify-content-center" >

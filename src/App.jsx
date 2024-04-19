@@ -1,7 +1,7 @@
 import { useState,useEffect } from 'react'
 import React from "react"
 import './App.css'
-import {Route, BrowserRouter as Router,Routes,useLocation } from 'react-router-dom'
+import {Route,Routes,useLocation } from 'react-router-dom'
 import { UserTypeProvider } from './context/UserTypeContext'
 import LoginPage from './Pages/MainLoginPAge/LoginPage'
 import AddUpdate from './component/Admin/AddUpdate'
@@ -17,6 +17,9 @@ import { CardList } from './component/Admin/Card/CardList'
 import AdminLayout from './component/Admin/AdminLayout'
 import SideBarLayout from './component/Teacher/SidebarLayout'
 import StudentLayou from './component/Student/StudentLayou'
+import Teacher from './Pages/LoginPaages.jsx/Teacher'
+import Stuent from './Pages/LoginPaages.jsx/Stuent'
+import Class from './component/Class'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -24,14 +27,17 @@ function App() {
   return (
     <>
     
-     <Router>
-   <Navbar></Navbar>
+     
+    <Navbar></Navbar>
       <Routes>
+      
 <Route path="/" element={<LoginPage/>}/>
-<Route path="/admin" element={<AdminLayout/>}/>
-<Route path="/teacher" element={<SideBarLayout/>}/>
-<Route path="/student" element={<StudentLayou/>}/>
-
+<Route path="/ad" element={<Admin/>}/>
+<Route path="/tech" element={<Teacher/>}/>
+<Route path="/stud" element={<Stuent/>}/>
+<Route path="/admin/*" element={<AdminLayout/>}/>
+<Route path="/teacher/*" element={<SideBarLayout/>}/>
+<Route path="/student/*" element={<StudentLayou/>}/>
 
 
 
@@ -39,7 +45,7 @@ function App() {
 
 
   </Routes>
-  </Router>    
+   
     
     </>
   )

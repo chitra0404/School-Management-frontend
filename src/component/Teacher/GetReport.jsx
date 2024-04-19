@@ -12,11 +12,13 @@ const GetReport = () => {
     fetchData();
   }, [setReport]);
   return(
-  <div>
-    <div className="d-grid gap-2 d-md-flex justify-content-md-end">
-  {/* <button className="btn btn-primary me-md-2" type="button" onClick={()=>navigate("/request")} >ADD LEAD</button> */}
-  
-</div>
+
+     <section className="vh-100 vw-100 mt-5" >
+      
+      <div className="col-md-6  align-items-start   ">
+               
+                  
+              
  
     <table className='table table-hover'>
         <thead className='table-dark'>
@@ -68,7 +70,10 @@ const GetReport = () => {
 
   
     
+    
+   
     </div>
+    </section>
                
                 
   )

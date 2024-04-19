@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate,useLocation, Route, Routes } from 'react-router-dom';
 import { useUserType } from '../../context/UserTypeContext';
+import Subject from '../Subject';
 
 
 
@@ -43,9 +44,10 @@ function SideBar() {
                 
               </li>
               <li>
-                <a href="#" className="nav-link px-0 align-middle">
-                  <i className="fs-4 bi-people"></i> <span className="ms-1 d-none d-sm-inline">Customers</span>
-                </a>
+              <Link to="/getsub" className="nav-link px-0 align-middle">
+                  <i className="fs-4 bi-house"></i> <span className="ms-1 d-none d-sm-inline">subject</span>
+                </Link>
+                
               </li>
               <li><a className="dropdown-item" onClick={handleLog}>Sign out</a></li>
 

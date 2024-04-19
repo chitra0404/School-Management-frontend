@@ -1,13 +1,26 @@
 // Login.js
-import React from 'react';
+import React ,{useEffect} from 'react';
 
 import Stuent from '../LoginPaages.jsx/Stuent';
 import Teacher from '../LoginPaages.jsx/Teacher';
 import Admin from '../LoginPaages.jsx/Admin';
 import { useUserType } from '../../context/UserTypeContext';
+import { useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
   const { userType, setUserType } = useUserType();
+  const navigate=useNavigate();
+
+  useEffect(() => {
+    if (userType === 'admin') {
+      navigate('/ad');}
+      else if(userType === 'teacher') {
+        navigate('/tech');
+    }
+    else if(userType === 'student') {
+      navigate('/stud');
+  }
+  }, [userType]);
 
   return (
     <section className="vh-100 vw-100 d-flex justify-content-center align-items-center" >
@@ -34,9 +47,7 @@ const LoginPage = () => {
 
             </div>
           )}
-          {userType === 'student' && <Stuent />}
-          {userType === 'teacher' && <Teacher />}
-          {userType === 'admin' && <Admin />}
+       
         </div>
       </div>
     </section>

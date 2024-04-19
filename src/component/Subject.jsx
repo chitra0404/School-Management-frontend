@@ -3,13 +3,13 @@ import React,{useEffect,useState} from 'react';
 import axios from 'axios';
 
 
-function Notice() {
+function Subject() {
 
 
     const [notice, setNotice] = useState([]);
  
     useEffect(() => {
-        axios.get("http://localhost:3000/app/getupdate")
+        axios.get("http://localhost:3000/app/getsub")
            .then(res => {
                
                  setNotice([notice,...res.data.message]);
@@ -25,9 +25,11 @@ function Notice() {
     <table className='table table-hover '>
         <thead className='table-dark'>
             <tr>
-            <th >date</th>
-                            <th>title</th>
-                            <th>details</th>
+            <th >subcode</th>
+                            <th>subname</th>
+                            <th>sessions</th>
+                            <th>class</th>
+                            <th>teacherName</th>
                             
                             
                 
@@ -43,9 +45,11 @@ function Notice() {
  notice.map((item, index) => (
                 // update===item.id?<EditList item={item} user={user} setUser={setUser} handleEdit={handleEdit}  />:
                 <tr  className="table" key={index}> 
-                <td>{item.date}</td>
-                <td>{item.title}</td>
-                <td >{item.details}</td>
+                <td>{item.subcode}</td>
+                <td>{item.subname}</td>
+                <td >{item.sessions}</td>
+                <td >{item.className}</td>
+                <td >{item.teacherName}</td>
                 
              
                     <td></td>
@@ -65,5 +69,5 @@ function Notice() {
               )
             }
             
-            export default Notice;
+            export default Subject;
             
