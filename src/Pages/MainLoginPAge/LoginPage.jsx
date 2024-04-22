@@ -1,6 +1,5 @@
 // Login.js
-import React ,{useEffect} from 'react';
-
+import React ,{useEffect} from 'react'
 import Stuent from '../LoginPaages.jsx/Stuent';
 import Teacher from '../LoginPaages.jsx/Teacher';
 import Admin from '../LoginPaages.jsx/Admin';

@@ -39,7 +39,7 @@ export const UserTypeProvider = ({ children }) => {
 
   const handleLogout=()=>{
     localStorage.removeItem("tokenAuth");
-    navigate("/");
+   
    
    
   }

@@ -8,7 +8,7 @@ function StudentSideBar() {
   const {handleLogout}=useUserType();
   const handleLog = () => {
       handleLogout(); // Call handleLogout function to remove user session
-       // Redirect the user to the homepage
+      navigate("/"); // Redirect the user to the homepage
     };
 
   return (
@@ -51,7 +51,7 @@ function StudentSideBar() {
                 </ul>
                 <div className="dropdown pb-4">
                   <a href="#" className="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="" alt="" width="30" height="30" className="rounded-circle" />
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgL_TuJtRyIoMBZ0sweo6V8-1TnAaLyuIoan4BLCBmTQ&s" alt="" width="30" height="30" className="rounded-circle" />
                     
                   </a>
                   <ul className="dropdown-menu dropdown-menu-dark text-small shadow">
