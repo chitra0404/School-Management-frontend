@@ -18,33 +18,33 @@ function SideBar() {
         <div className=" col-md-6   bg-dark">
           {/* Sidebar content */}
           <div className="d-flex flex-column align-items-center align-items text-white min-vh-100">
-            <Link to="/" className="d-flex align-items-center  me-md-auto text-white text-decoration-none">
+            <Link to="/teacher" className="d-flex align-items-center  me-md-auto text-white text-decoration-none">
               <span className="fs-5 d-none d-sm-inline">Menu</span>
             </Link>
             <ul className="nav nav-pills flex-column  mb-0 align-items-center align-items-sm-start" id="menu">
               <li className="nav-item">
-                <Link to="/card" className="nav-link align-middle px-0">
+                <Link to="/teacher/card" className="nav-link align-middle px-0">
                   <i className="fs-4 bi-house"></i> <span className="ms-1 d-none d-sm-inline">Home</span>
                 </Link>
               </li>
               <li>
-                <Link to="/addreport" className="nav-link px-0 align-middle">
+                <Link to="/teacher/addreport" className="nav-link px-0 align-middle">
                   <i className="fs-4 bi-house"></i> <span className="ms-1 d-none d-sm-inline">CreateReport</span>
                 </Link>
               </li>
               <li>
-                <Link to="/getreport" className="nav-link px-0 align-middle">
+                <Link to="/teacher/getreport" className="nav-link px-0 align-middle">
                   <i className="fs-4 bi-house"></i> <span className="ms-1 d-none d-sm-inline">reports</span>
                 </Link>
               </li>
               <li>
-              <Link to="/getnotice" className="nav-link px-0 align-middle">
+              <Link to="/teacher/getnotice" className="nav-link px-0 align-middle">
                   <i className="fs-4 bi-house"></i> <span className="ms-1 d-none d-sm-inline">Notice</span>
                 </Link>
                 
               </li>
               <li>
-              <Link to="/getsub" className="nav-link px-0 align-middle">
+              <Link to="/teacher/getsub" className="nav-link px-0 align-middle">
                   <i className="fs-4 bi-house"></i> <span className="ms-1 d-none d-sm-inline">subject</span>
                 </Link>
                 

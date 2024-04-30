@@ -20,14 +20,14 @@ function StudentLayout() {
           <div className="col-sm-9 h-100">
             <div className="row align-items-start">
               <div className="col-md-9 align-items-start"> {/* 3/4 width */}
-                <Routes>
+               <Routes>
                   <Route path="/card" element={<CardList />} />
                   <Route path="/getnotice" element={<Notice />} />
                   <Route path="/getreport" element={<GetReport />} />
                   <Route path="/getsub" element={<Subject />} />
 
                 </Routes>
-              </div>
+              </div> 
               <div className="col-md-3"> {/* 1/4 width */}
                 {/* Additional content */}
               </div>

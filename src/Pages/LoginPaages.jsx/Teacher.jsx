@@ -134,10 +134,10 @@ console.log(res.data);
                         </button>
                       </div>
                       <Link
-                        to="/forgot"
+                        to="/"
                         className="small text-muted"
                       >
-                        Forgot password?
+                       back
                       </Link>
                       
                      

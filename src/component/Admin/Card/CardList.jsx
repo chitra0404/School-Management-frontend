@@ -5,25 +5,25 @@ import { Card } from './Card';
 export function CardList() {
     const cardData = [
         {
-            title: "Product",
-            count: 150,
+            title: "student",
+            count: 50,
             colors: "success",
             
         },
         {
-            title: "Orders",
-            count: 130,
+            title: "class",
+            count: 5,
             colors: "warning",
         },
         {
-            title: "customers",
-            count: 350,
+            title: "teachers",
+            count: 7,
             colors: "info",
 
         },
         {
-            title: "employee",
-            count: "158",
+            title: "subject",
+            count: "15",
             colors: "primary",
         }
     ];

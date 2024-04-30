@@ -159,12 +159,12 @@ const navigate = useNavigate();
                           Login
                         </button>
                       </div>
-                      {/* <Link
-                        to="/forgot"
+                      <Link
+                        to="/"
                         className="small text-muted"
                       >
-                        Forgot password?
-                      </Link> */}
+                     back
+                      </Link>
                       <p className="mb-1 pb-lg-2" style={{ color: "#393f81" }}>
                         Don't have an account?{" "}
                         {/* <Link

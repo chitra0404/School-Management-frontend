@@ -12,8 +12,8 @@ function Subject() {
         axios.get("http://localhost:3000/app/getsub")
            .then(res => {
                
-                 setNotice([notice,...res.data.message]);
-               console.log("Use data:", res.data.message);
+                 setNotice([notice,...res.data]);
+               console.log("Use data:", res.data);
            })
         }, []);
 

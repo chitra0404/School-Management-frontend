@@ -42,7 +42,7 @@ clas.map((item, index) => (
                 
              
                     <td>
- <button><Link to="/addsub">addsub</Link></button>
+ <button><Link to="/admin/addsub">addsub</Link></button>
 
   
   </td>

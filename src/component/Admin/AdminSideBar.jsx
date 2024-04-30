@@ -21,55 +21,49 @@ function AdminSideBar() {
         <div className=" col-md-6  bg-success">
           {/* Sidebar content */}
           <div className="d-flex flex-column align-items-center align-items text-white min-vh-100">
-            <Link to="/" className="d-flex align-items-center  me-md-auto text-dark text-decoration-none">
+            <Link to="/admin" className="d-flex align-items-center  me-md-auto text-dark text-decoration-none">
               <span className="fs-5 d-none d-sm-inline">Menu</span>
             </Link>
             <ul className="nav nav-pills flex-column  mb-0 align-items-center align-items-sm-start" id="menu">
               <li className="nav-item">
-                <Link to="/card" className="nav-link align-middle text-dark px-0">
+                <Link to="/admin/card" className="nav-link align-middle text-dark px-0">
                   <i className="fs-4 bi-house"></i> <span className="ms-1 d-none d-sm-inline">Home</span>
                 </Link>
               </li>
               <li>
-                <Link to="/addteacher" className="nav-link px-0 text-dark align-middle">
+                <Link to="/admin/addteacher" className="nav-link px-0 text-dark align-middle">
                   <i className="fs-4 bi-house"></i> <span className="ms-1 d-none d-sm-inline">Add Teacher</span>
                 </Link>
               </li>
               <li>
-                <Link to="/addstudent" className="nav-link px-0 text-dark align-middle">
+                <Link to="/admin/addstudent" className="nav-link px-0 text-dark align-middle">
                   <i className="fs-4 bi-house"></i> <span className="ms-1 d-none d-sm-inline">Add Student</span>
                 </Link>
               </li>
               <li>
              
-                <Link to="/addnotice" className="nav-link px-0 text-dark align-middle">
+                <Link to="/admin/addnotice" className="nav-link px-0 text-dark align-middle">
                   <i className="fs-4 bi-house"></i> <span className="ms-1 d-none d-sm-inline">Add Notice</span>
                 </Link>
                 
                   </li>
                   <li>
              
-             <Link to="/getclass" className="nav-link px-0 text-dark align-middle">
+             <Link to="/admin/getclass" className="nav-link px-0 text-dark align-middle">
                <i className="fs-4 bi-house"></i> <span className="ms-1 d-none d-sm-inline">class</span>
              </Link>
              
                </li>
                <li>
              
-             <Link to="/addsub" className="nav-link px-0 text-dark align-middle">
+             <Link to="/admin/sub" className="nav-link px-0 text-dark align-middle">
                <i className="fs-4 bi-house"></i> <span className="ms-1 d-none d-sm-inline">subject</span>
              </Link>
              
                </li>
 
-              <li>
-                <a href="#" className="nav-link px-0 align-middle">
-                  <i className="fs-4 bi-people"></i> <span className="ms-1 d-none d-sm-inline text-dark">Customers</span>
-                </a>
-              </li>
-              <li>
-                    <a href="#" className="nav-link px-0 text-dark"> <span className="d-none d-sm-inline">Product</span> 4</a>
-                  </li>
+           
+            
                   <li><a className="dropdown-item" onClick={handleLog}>Sign out</a></li>
 
 

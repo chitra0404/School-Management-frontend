@@ -8,6 +8,7 @@ import Notice from '../Notice';
 import AddUpdate from './AddUpdate';
 import Class from '../Class';
 import AddSubject from './AddSubject';
+import Subject from '../Subject';
 
 function AdminLayout() {
   return (
@@ -27,6 +28,7 @@ function AdminLayout() {
             <Route path="/addnotice" element={<AddUpdate />} />
             <Route path="/getclass" element={<Class />} />
             <Route path="/addsub" element={<AddSubject />} />
+            <Route path="/sub" element={<Subject/>}/>
 
         
 

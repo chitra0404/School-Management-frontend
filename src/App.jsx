@@ -20,6 +20,7 @@ import StudentLayou from './component/Student/StudentLayou'
 import Teacher from './Pages/LoginPaages.jsx/Teacher'
 import Stuent from './Pages/LoginPaages.jsx/Stuent'
 import Class from './component/Class'
+import Subject from './component/Subject'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -38,6 +39,10 @@ function App() {
 <Route path="/admin/*" element={<AdminLayout/>}/>
 <Route path="/teacher/*" element={<SideBarLayout/>}/>
 <Route path="/student/*" element={<StudentLayou/>}/>
+{/* <Route path="/card" element={<CardList />} />
+                  <Route path="/getnotice" element={<Notice />} />
+                  <Route path="/getreport" element={<GetReport />} />
+                  <Route path="/getsub" element={<Subject />} /> */}
 
 
 
@@ -65,16 +70,17 @@ function Navbar() {
     } else if (path.startsWith('/student')) {
       setUserRole('student');
     }
+    console.log(path);
   }, [location]);
 
   return (
     <>
-     {userRole === 'admin' ? (
+     {/* {userRole === 'admin' ? (
         <AdminLayout />
       ) : userRole === 'teacher' ? (
         <SideBarLayout/>)
        :userRole === 'student' ? (
-        <StudentLayou/>):null }
+        <StudentLayou/>):null } */}
     </>
   );
 }
