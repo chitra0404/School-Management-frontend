@@ -2,6 +2,7 @@ import React,{useEffect,useState} from 'react';
 import { useNavigate ,Link} from 'react-router-dom';
 
 import axios from 'axios';
+import { Base_Url } from '../config/api';
 
 
 function Class() {
@@ -10,7 +11,7 @@ function Class() {
     const [clas, setClas] = useState([]);
  
     useEffect(() => {
-        axios.get("http://localhost:3000/app/getclass")
+        axios.get(`${Base_Url}/app/getclass`)
            .then(res => {
                
                  setClas([clas,...res.data]);

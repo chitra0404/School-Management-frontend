@@ -1,6 +1,7 @@
 import React,{useEffect,useState} from 'react';
 
 import axios from 'axios';
+import { Base_Url } from '../config/api';
 
 
 function Subject() {
@@ -9,7 +10,7 @@ function Subject() {
     const [notice, setNotice] = useState([]);
  
     useEffect(() => {
-        axios.get("http://localhost:3000/app/getsub")
+        axios.get(`${Base_Url}/app/getsub`)
            .then(res => {
                
                  setNotice([notice,...res.data]);

@@ -4,6 +4,7 @@ import { useFormik } from "formik";
 import axios from "axios";
 
 import { useUserType } from "../../context/UserTypeContext";
+import { Base_Url } from "../../config/api";
 
 function Teacher() {
     const { setUserType } = useUserType();
@@ -13,7 +14,7 @@ function Teacher() {
 
   const HandleLogin = async (email, password) => {
     try {
-      const res = await axios.post(`http://localhost:3000/app/techlogin`, { email, password });
+      const res = await axios.post(`${Base_Url}/app/techlogin`, { email, password });
 console.log(res.data);
       window.localStorage.setItem("loggedInUser", JSON.stringify(res.data.token));
       setInvaild(false);

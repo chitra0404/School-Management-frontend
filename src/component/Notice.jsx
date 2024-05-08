@@ -1,6 +1,7 @@
 import React,{useEffect,useState} from 'react';
 
 import axios from 'axios';
+import { Base_Url } from '../config/api';
 
 
 function Notice() {
@@ -9,7 +10,7 @@ function Notice() {
     const [notice, setNotice] = useState([]);
  
     useEffect(() => {
-        axios.get("http://localhost:3000/app/getupdate")
+        axios.get(`${Base_Url}/app/getupdate`)
            .then(res => {
                
                  setNotice([notice,...res.data.message]);

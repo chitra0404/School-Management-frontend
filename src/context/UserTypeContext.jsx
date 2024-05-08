@@ -2,6 +2,7 @@
 import React, { createContext, useContext, useState, useEffect, } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from "react-router-dom";
+import { Base_Url } from '../config/api';
 
 
 const UserTypeContext = createContext();
@@ -10,7 +11,7 @@ export const useUserType = () => useContext(UserTypeContext);
 
 export const fetchReport = async () => {
   try {
-    const res = await axios.get("http://localhost:3000/app/getreport");
+    const res = await axios.get(`${Base_Url}/app/getreport`);
     console.log(res.data);
     return res.data;
   } catch (err) {
@@ -20,7 +21,7 @@ export const fetchReport = async () => {
 };
 export const fetchSubject=async()=>{
   try{
-  const res = await axios.get("http://localhost:3000/app/getsub");
+  const res = await axios.get(`${Base_Url}/app/getsub`);
     console.log(res.data);
     return res.data;
 

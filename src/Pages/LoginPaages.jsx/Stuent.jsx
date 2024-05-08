@@ -4,6 +4,7 @@ import { useFormik } from "formik";
 import axios from "axios";
 
 import { useUserType } from "../../context/UserTypeContext";
+import { Base_Url } from "../../config/api";
 
 function Stuent() {
     const { setUserType } = useUserType();
@@ -15,7 +16,7 @@ const navigate = useNavigate();
 
   const HandleLogin = async (studentID,email, password) => {
     try {
-      const res = await axios.post(`http://localhost:3000/app/Studentlog`, {studentID, email, password });
+      const res = await axios.post(`${Base_Url}/app/Studentlog`, {studentID, email, password });
 
       window.localStorage.setItem("loggedInUser", JSON.stringify(res.data.token));
       setInvaild(false);

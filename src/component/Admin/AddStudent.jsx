@@ -1,6 +1,7 @@
 import React,{useEffect,useState} from 'react';
 // import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { Base_Url } from '../../config/api';
 
 
 
@@ -40,7 +41,7 @@ function AddStudent() {
         const email = localStorage.getItem('email')
                 console.log(token, email)
             const config = { headers : {"x-auth-token" : token}} 
-        const response = await axios.post(`http://localhost:3000/app/teachReg`, 
+        const response = await axios.post(`${Base_Url}/app/teachReg`, 
         student, config) 
         //console.log(response);
         if(response.status === 200){

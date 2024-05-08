@@ -1,6 +1,7 @@
 import React,{useEffect,useState} from 'react';
 // import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { Base_Url } from '../../config/api';
 
 
 
@@ -30,7 +31,7 @@ function AddUpdate() {
         const email = localStorage.getItem('email')
                 console.log(token, email)
             const config = { headers : {"x-auth-token" : token}} 
-        const response = await axios.post(`http://localhost:3000/app/addupdate`, 
+        const response = await axios.post(`${Base_Url}/app/addupdate`, 
         update, config) 
         //console.log(response);
         if(response.status === 200){
