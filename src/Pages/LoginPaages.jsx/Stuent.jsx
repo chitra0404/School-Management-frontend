@@ -16,7 +16,7 @@ const navigate = useNavigate();
 
   const HandleLogin = async (studentID,email, password) => {
     try {
-      const res = await axios.post(`${Base_Url}/app/Studentlog`, {studentID, email, password });
+      const res = await axios.post(`${Base_Url}/app/studentlog`, {studentID, email, password });
 
       window.localStorage.setItem("loggedInUser", JSON.stringify(res.data.token));
       setInvaild(false);
