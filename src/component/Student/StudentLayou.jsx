@@ -7,32 +7,32 @@ import StudentSideBar from './StudentSidebar';
 import Subject from '../Subject';
 
 function StudentLayout() {
-  return (
-    <section className="vh-100 vw-100 d-flex justify-content-center align-items-center">
-      <div className="container-fluid h-100">
-        <h1 className='text-center bg-warning'>STUDENT DASHBOARD</h1>
-        <div className="row align-items-start h-100">
-          {/* Sidebar column */}
-          <div className="col-sm-3 h-100">
-            <StudentSideBar />
-          </div>
-          {/* Main content column */}
-          <div className="col-sm-9 h-100">
-            <div className="row align-items-start">
-              <div className="col-md-9 align-items-start"> {/* 3/4 width */}
-               <Routes>
-                  <Route path="/card" element={<CardList />} />
-                  <Route path="/getnotice" element={<Notice />} />
-                  <Route path="/getreport" element={<GetReport />} />
-                  <Route path="/getsub" element={<Subject />} />
+  const sectionStyle = {
+    backgroundImage: 'url(https://img.freepik.com/free-vector/watercolor-back-school-background-with-white-space_52683-41450.jpg)', // Replace with your image path
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    minHeight: '100vh',
+    width: '100vw'
+  };
 
-                </Routes>
-              </div> 
-              <div className="col-md-3"> {/* 1/4 width */}
-                {/* Additional content */}
-              </div>
-            </div>
-          </div>
+  return (
+    <section style={sectionStyle} className="d-flex justify-content-center align-items-center">
+      <div className="row align-items-start h-100 w-100">
+       
+        <div className="col-md-4 w-25 align-items-start">
+          <StudentSideBar />
+        </div>
+        <div className="col-md-8 h-100 align-item-start">
+          <Routes>
+            <Route path="/card" element={<CardList />} />
+            <Route path="/getnotice" element={<Notice />} />
+            <Route path="/getreport" element={<GetReport />} />
+            <Route path="/getsub" element={<Subject />} />
+          </Routes>
+        </div>
+        <div className="col-md-3">
+          {/* Additional content */}
         </div>
       </div>
     </section>

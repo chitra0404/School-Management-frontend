@@ -13,9 +13,9 @@ function SideBar() {
         navigate("/"); // Redirect the user to the homepage
       };
   return (
-    <div className="container-fluid">
-      <div className="row flex-wrap">
-        <div className=" col-md-6   bg-dark">
+   
+      <div className="row vh-100 flex-wrap">
+        <div className=" col-md-6 h-100  bg-dark">
           {/* Sidebar content */}
           <div className="d-flex flex-column align-items-center align-items text-white min-vh-100">
             <Link to="/teacher" className="d-flex align-items-center  me-md-auto text-white text-decoration-none">
@@ -68,7 +68,7 @@ function SideBar() {
         </div>
 
       </div>
-    </div>
+
   );
 }
 

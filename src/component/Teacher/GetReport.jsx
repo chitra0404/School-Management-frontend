@@ -14,13 +14,13 @@ const GetReport = () => {
   return(
 
      <section className="vh-100 vw-100 mt-5" >
-      
+      <h4 className='text-start'>Reports:</h4>
       <div className="col-md-6  align-items-start   ">
                
                   
               
  
-    <table className='table table-hover'>
+    <table className='table table-bordered'>
         <thead className='table-dark'>
             <tr>
             <th >name</th>
@@ -38,7 +38,7 @@ const GetReport = () => {
 
 
 
-                <th></th>
+          
             </tr>
         </thead>
         <tbody>
@@ -58,9 +58,9 @@ const GetReport = () => {
                 <td>{item.score}</td>
                 <td>{item.total}</td>
                     
-                    <td>{item.lead_status}</td>
+            
              
-                    <td></td>
+             
 
                 </tr>
             ))}

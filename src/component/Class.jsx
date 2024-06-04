@@ -1,67 +1,45 @@
-import React,{useEffect,useState} from 'react';
-import { useNavigate ,Link} from 'react-router-dom';
-
+import React, { useEffect, useState } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 import { Base_Url } from '../config/api';
 
-
 function Class() {
-
-
     const [clas, setClas] = useState([]);
- 
+
     useEffect(() => {
         axios.get(`${Base_Url}/app/getclass`)
-           .then(res => {
-               
-                 setClas([clas,...res.data]);
-               console.log("Use data:", res.data);
-           })
-        }, []);
+            .then(res => {
+                setClas([...res.data]);
+                console.log("Use data:", res.data);
+            });
+    }, []);
 
-        return(
-            <section classNameName="vh-100 vw-100 mt-5" >
-      
-            <div classNameName="col-md-6  align-items-start   ">
- 
-    <table classNameName='table table-hover '>
-        <thead classNameName='table-dark'>
-            <tr>
-            <th >class</th>
-            <th>Action</th>
-                          
-                
-            </tr>
-        </thead>
-        <tbody>
-            {
-clas.map((item, index) => (
-                // update===item.id?<EditList item={item} user={user} setUser={setUser} handleEdit={handleEdit}  />:
-                <tr  classNameName="table" key={index}> 
-                <td>{item.className}</td>
-                
-                
-             
-                    <td>
- <button><Link to="/admin/addsub">addsub</Link></button>
+    return (
+        <section className=" mt-5 pt-5 d-flex justify-content-center align-items-center">
+            <div className="col-md-8">
+                <table className="table table-bordered">
+                    <thead className="table-dark">
+                        <tr>
+                            <th>Class</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {clas.map((item, index) => (
+                            <tr key={index}>
+                                <td>{item.className}</td>
+                                <td>
+                                    <button className="btn btn-primary">
+                                        <Link to="/admin/addsub" className="text-white text-decoration-none">Add Subject</Link>
+                                    </button>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    );
+}
 
-  
-  </td>
-
-                </tr>
-            ))}
-           
-        </tbody>
-    </table>
-
-  
-    
-    </div>
-    </section>
-               
-                
-              )
-            }
-            
-            export default Class;
-            
+export default Class;

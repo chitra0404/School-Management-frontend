@@ -20,10 +20,10 @@ function Subject() {
 
         return(
             <section className="vh-100 vw-100 mt-5" >
-      
+      <h4 className='text-start'>subjects:</h4>
             <div className="col-md-6  align-items-start   ">
  
-    <table className='table table-hover '>
+    <table className='table table-bordered '>
         <thead className='table-dark'>
             <tr>
             <th >subcode</th>
@@ -37,8 +37,6 @@ function Subject() {
 
 
 
-
-                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -53,7 +51,7 @@ function Subject() {
                 <td >{item.teacherName}</td>
                 
              
-                    <td></td>
+          
 
                 </tr>
             ))}

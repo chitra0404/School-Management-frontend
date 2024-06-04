@@ -166,15 +166,7 @@ const navigate = useNavigate();
                       >
                      back
                       </Link>
-                      <p className="mb-1 pb-lg-2" style={{ color: "#393f81" }}>
-                        Don't have an account?{" "}
-                        {/* <Link
-                          to="/"
-                          style={{ color: "#393f81" }}
-                        >
-                          Register here
-                        </Link> */}
-                      </p>
+                    
                       <p className="small text-muted">
                         Terms of use. Privacy policy
                       </p>

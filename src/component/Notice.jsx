@@ -20,10 +20,10 @@ function Notice() {
 
         return(
             <section className="vh-100 vw-100 mt-5" >
-      
+      <h5 className="text-start">Notice Details:</h5>
             <div className="col-md-6  align-items-start   ">
  
-    <table className='table table-hover '>
+    <table className='table table-bordered '>
         <thead className='table-dark'>
             <tr>
             <th >date</th>
@@ -36,7 +36,6 @@ function Notice() {
 
 
 
-                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -49,7 +48,6 @@ function Notice() {
                 <td >{item.details}</td>
                 
              
-                    <td></td>
 
                 </tr>
             ))}

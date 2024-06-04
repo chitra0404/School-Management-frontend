@@ -95,12 +95,12 @@ function AddStudent() {
   return (
     <div>
     <div>
-    <section className="vh-100 vw-100 mt-5" >
+    <section className="vh-100 vw-100 " >
      
             <div className="col-md-6 align-item-start   ">
              
                   <h2 className="text-uppercase text-center mb-4">
-                    
+                  Add Student  
                   </h2>
 
                   <form onSubmit={handleSubmit}>

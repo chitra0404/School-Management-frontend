@@ -95,13 +95,13 @@ function AddTeacher() {
   return (
     <div>
     <div>
-    <section className="vh-100 vw-100 mt-5" >
+    <section className="vh-100 vw-100" >
      
             <div className="col-md-6  align-items-start   ">
              
                 
                   <h2 className="text-uppercase text-center mb-4">
-                   
+                   Add Teacher
                   </h2>
 
                   <form onSubmit={handleSubmit}>
