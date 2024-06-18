@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import axios from "axios";
@@ -12,7 +12,10 @@ function Admin() {
     const [invalid, setInvalid] = useState(false);
     const navigate = useNavigate();
 
-   
+    const demoCredentials = {
+        email: "ajay@gmail.com",
+        password: "password",
+    };
 
     const handleLogin = async (email, password) => {
         try {
@@ -21,7 +24,7 @@ function Admin() {
             window.localStorage.setItem("loggedInUser", JSON.stringify(res.data.token));
             setInvalid(false);
             setSuccess(true);
-            setUserType('admin')
+            setUserType('admin');
             setTimeout(() => {
                 navigate("/admin");
             }, 500);
@@ -56,31 +59,32 @@ function Admin() {
         },
     });
 
+    const setDemoCredentials = () => {
+        formik.setValues(demoCredentials);
+    };
+
     return (
-        <section className="vh-100 vw-100 justify-content-center">
+        <section className="vh-100 vw-100 d-flex justify-content-center align-items-center">
             <div className="container py-5 h-100">
                 <div className="row d-flex justify-content-center align-items-center h-100">
                     <div className="col-md-6 col-lg-7 d-flex align-items-center">
                         <div className="card-body p-lg-3 text-black">
                             <form onSubmit={formik.handleSubmit}>
-                                <div className="d-flex align-items-center ">
+                                <div className="d-flex flex-column align-items-center">
                                     <i
                                         className="fas fa-cubes fa-2x me-3"
                                         style={{ color: "#ff6219" }}
                                     ></i>
-                                    <span className="h1 fw-bold">ADMIN Login</span>
+                                    <span className="h1 fw-bold text-center">ADMIN Login</span>
                                 </div>
 
-                                <h5
-                                    className="fw-normal"
-                                    style={{ letterSpacing: "1px" }}
-                                >
+                                <h5 className="fw-normal text-center" style={{ letterSpacing: "1px" }}>
                                     Sign into your account
                                 </h5>
 
                                 <div className="form-outline">
                                     <label className="form-label" htmlFor="loginemail">
-                                        Email address :
+                                        Email address:
                                     </label>
                                     <input
                                         type="email"
@@ -99,7 +103,7 @@ function Admin() {
                                 </div>
                                 <div className="form-outline mb-2">
                                     <label className="form-label" htmlFor="loginpassword">
-                                        Password :
+                                        Password:
                                     </label>
                                     <input
                                         type="password"
@@ -126,32 +130,25 @@ function Admin() {
                                 </p>
 
                                 <div className="pt-1 mb-2">
-                                    <button
-                                        className="btn btn-dark btn-lg btn-block"
-                                        type="submit"
-                                    >
+                                    <button className="btn btn-dark btn-lg btn-block" type="submit">
                                         Login
                                     </button>
-                                </div>
-                                <Link
-                                    to="/forgot"
-                                    className="small text-muted"
-                                >
-                                    Forgot password?
-                                </Link>
-                                <p className="mb-1 pb-lg-2" style={{ color: "#393f81" }}>
-
-                                    <Link
-                                        to="/"
-                                        style={{ color: "#393f81" }}
+                                    <p></p>
+                                    <button
+                                        type="button"
+                                        className="btn btn-dark btn-lg btn-block "
+                                        onClick={setDemoCredentials}
                                     >
-                                        Back
-                                    </Link>
-                                </p>
-                                <p className="small text-muted">
-                                    Terms of use. Privacy policy
-                                </p>
+                                        Demo 
+                                    </button>
+                                </div>
+                               
+
+                                <p className="small text-muted">Terms of use. Privacy policy</p>
                             </form>
+                            <Link to="/" className="small text-muted">
+                                    Back
+                                </Link>
                         </div>
                     </div>
                 </div>

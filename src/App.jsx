@@ -29,7 +29,7 @@ function App() {
     <>
     
      
-    <Navbar></Navbar>
+   
       <Routes>
       
 <Route path="/" element={<LoginPage/>}/>
@@ -55,34 +55,34 @@ function App() {
     </>
   )
 }
-function Navbar() {
-  const [userRole, setUserRole] = useState('');
+// function Navbar() {
+//   const [userRole, setUserRole] = useState('');
 
-  const location = useLocation();
+//   const location = useLocation();
 
-  useEffect(() => {
-    const path = location.pathname;
+//   // useEffect(() => {
+//   //   const path = location.pathname;
 
-    if (path.startsWith('/admin')) {
-      setUserRole('admin');
-    } else if (path.startsWith('/teacher')) {
-      setUserRole('teacher');
-    } else if (path.startsWith('/student')) {
-      setUserRole('student');
-    }
-    console.log(path);
-  }, [location]);
+//   //   if (path.startsWith('/admin')) {
+//   //     setUserRole('admin');
+//   //   } else if (path.startsWith('/teacher')) {
+//   //     setUserRole('teacher');
+//   //   } else if (path.startsWith('/student')) {
+//   //     setUserRole('student');
+//   //   }
+//   //   console.log(path);
+//   // }, [location]);
 
-  return (
-    <>
-     {/* {userRole === 'admin' ? (
-        <AdminLayout />
-      ) : userRole === 'teacher' ? (
-        <SideBarLayout/>)
-       :userRole === 'student' ? (
-        <StudentLayou/>):null } */}
-    </>
-  );
-}
+//   return (
+//     <>
+//      {/* {userRole === 'admin' ? (
+//         <AdminLayout />
+//       ) : userRole === 'teacher' ? (
+//         <SideBarLayout/>)
+//        :userRole === 'student' ? (
+//         <StudentLayou/>):null } */}
+//     </>
+//   );
+// }
 
 export default App

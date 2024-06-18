@@ -9,7 +9,7 @@ function StudentSideBar() {
   const handleLog =async () => {
     //  await handleLogout(); // Call handleLogout function to remove user session
     console.log("error");
-      navigate("/stud"); // Redirect the user to the homepage
+      navigate("/"); // Redirect the user to the homepage
     };
 
   return (
