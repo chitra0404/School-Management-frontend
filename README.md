@@ -1,6 +1,16 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+for sample admin login:
+Email:ajay@gmail.com
+Password:password
+
+for teacher:
+Email:latha@gmail.com
+password:password
+
+for student:
+Email:rahul@123.com
+password:password
 
 Currently, two official plugins are available:
 
